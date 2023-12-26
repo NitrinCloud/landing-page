@@ -1,7 +1,7 @@
 "use client"
 
 import Python_logo from "@/public/technologies/Python-logo.svg"
-import Java_logo from "@/public/technologies/Java-logo.svg"
+import Java_logo from "@/public/technologies/Java-logo.png"
 import Go_logo from "@/public/technologies/Go-logo.svg"
 import Kotlin_logo from "@/public/technologies/Kotlin-logo.png"
 import HTML_logo from "@/public/technologies/HTML-logo.svg"
