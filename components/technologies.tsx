@@ -193,22 +193,22 @@ export function Technologies() {
     return (<>
         <ToggleGroup onValueChange={values => {
             setCategories(values)
-        }} type="multiple" className="mt-6 gap-5">
-            <ToggleGroupItem variant="outline" value="Language" aria-label="Toggle bold">
+        }} type="multiple" className="mt-6 gap-5 flex flex-col md:flex-row w-44">
+            <ToggleGroupItem className="w-full md:max-w-max" variant="outline" value="Language" aria-label="Toggle bold">
                 Programmiersprachen
             </ToggleGroupItem>
-            <ToggleGroupItem variant="outline" value="Framework" aria-label="Toggle bold">
+            <ToggleGroupItem className="w-full md:max-w-max" variant="outline" value="Framework" aria-label="Toggle bold">
                 Frameworks
             </ToggleGroupItem>
-            <ToggleGroupItem variant="outline" value="Database" aria-label="Toggle bold">
+            <ToggleGroupItem className="w-full md:max-w-max" variant="outline" value="Database" aria-label="Toggle bold">
                 Datenbanken
             </ToggleGroupItem>
-            <ToggleGroupItem variant="outline" value="Other" aria-label="Toggle bold">
+            <ToggleGroupItem className="w-full md:max-w-max" variant="outline" value="Other" aria-label="Toggle bold">
                 Sonstige
             </ToggleGroupItem>
         </ToggleGroup>
         <TooltipProvider>
-            <ul className='mt-12 grid grid-cols-7 gap-4'>
+            <ul className='mt-12 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 gap-4'>
                 {technologies.map((technology) => {
                     if (categories.length != 0) {
                         if (!(categories.includes(technology.category))) {
