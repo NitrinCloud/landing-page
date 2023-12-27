@@ -5,6 +5,7 @@ import { ParticleContainer } from '@/components/particle-container'
 import { Header } from '@/components/header'
 import { cn } from '@/lib/utils'
 import { Footer } from '@/components/footer'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +21,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-[#00000e] text-white")}>
+      <body className={cn(inter.className, "bg-[#00000e] text-white relative")}>
         <Header />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          forcedTheme="dark"
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Footer />
         <ParticleContainer />
       </body>

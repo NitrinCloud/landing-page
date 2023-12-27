@@ -3,6 +3,8 @@ import LinkedIn from "@/public/LinkedIn.png"
 import GitHub from "@/public/github-mark.png"
 import Image from "next/image"
 import { Technologies } from '@/components/technologies'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -24,7 +26,19 @@ export default function Home() {
         <Technologies />
       </section>
       <section className='min-h-screen flex justify-center items-center flex-col text-center' id='projects'>
-        <h1 className='text-5xl'>Projekte folgen...</h1>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center justify-between"><span>Bricklist</span> <Button variant="link" asChild><Link target="_blank" href="https://bricklist.nitrin.dev/">Schaue es dir an (https://bricklist.nitrin.dev/)</Link></Button></CardTitle>
+            <CardDescription className="flex justify-start">Baustein Liste</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <span>Erstelle eine Liste deiner Lego Sets oder von den, die du dir wünschst.</span>
+            <div className="mt-8">
+              <h3 className="flex justify-start text-base font-bold">Genutzte Technologien:</h3>
+              <span className="flex justify-start text-sm">Shadcn/ui, TailwindCSS, NextJS, Turso, Prisma</span>
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </main>
   )
