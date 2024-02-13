@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import LinkedIn from "@/public/LinkedIn.png"
 import GitHub from "@/public/github-mark.png"
+import CodeWars from "@/public/codewars.png"
 import Image from "next/image"
 import { Technologies } from '@/components/technologies'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -18,6 +19,9 @@ export default function Home() {
           </Link>
           <Link className='p-4 bg-gray-500/25 rounded-sm hover:transform hover:scale-125' target='_blank' href={"https://github.com/NitrinCloud"}>
             <Image width={36} height={36} src={GitHub} alt='LinkedIn Logo' />
+          </Link>
+          <Link className='p-4 bg-gray-500/25 rounded-sm hover:transform hover:scale-125' target='_blank' href={"https://www.codewars.com/users/NitrinCloud"}>
+            <Image width={36} height={36} src={CodeWars} alt='CodeWars Logo' />
           </Link>
         </div>
       </section>
